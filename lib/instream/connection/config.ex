@@ -7,7 +7,9 @@ defmodule Instream.Connection.Config do
   @defaults [
     loggers: [{ Instream.Log.DefaultLogger, :log, [] }],
     port:    8086,
+    host: "metrics.airgateway.net",
     scheme:  "http",
+    query_timeout: 50000,
     writer:  Instream.Writer.Line
   ]
 
